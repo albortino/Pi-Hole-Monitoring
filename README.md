@@ -35,13 +35,13 @@ from(bucket: "YOUR_BUCKET")
 
 ## Monitor mean reply time per query and type
 ```
-from(bucket: "datalake")
+from(bucket: "YOUR_BUCKET")
   |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
-  |> filter(fn: (r) => r._measurement == "pihole")
+  |> filter(fn: (r) => r._measurement == "MEASUREMENT_NAME")
   |> filter(fn: (r) => r._field == "reply_time")
   |> derivative(unit: 1s)
   |> group(columns: ["type"])
-  |> aggregateWindow(every: ${windowPeriod}, fn: mean, createEmpty: false)
+  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)
   |> keep(columns: ["_time", "type", "_value"])
 ```
 
