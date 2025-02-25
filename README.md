@@ -39,13 +39,13 @@ from(bucket: "YOUR_BUCKET")
   |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
   |> filter(fn: (r) => r._measurement == "MEASUREMENT_NAME")
   |> filter(fn: (r) => r._field == "reply_time")
-  |> derivative(unit: 1s)
   |> group(columns: ["type"])
   |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)
   |> keep(columns: ["_time", "type", "_value"])
 ```
 
 Example:
-![image](https://github.com/user-attachments/assets/9c9339d2-2da2-4fb4-a0f4-a61668ada257)
+![image](https://github.com/user-attachments/assets/19988ca6-fad6-41be-acea-3ead7c5e878b)
+
 
 
