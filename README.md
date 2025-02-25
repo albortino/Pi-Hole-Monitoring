@@ -45,5 +45,7 @@ from(bucket: "YOUR_BUCKET")
   |> keep(columns: ["_time", "type", "_value"])
 ```
 
+Example:
+![image](https://github.com/user-attachments/assets/9c9339d2-2da2-4fb4-a0f4-a61668ada257)
 
 
