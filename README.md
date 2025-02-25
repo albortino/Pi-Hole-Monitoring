@@ -3,7 +3,7 @@
 I am sharing my code for Pi-Hole monitoring with you.
 Feel free to use it in your projects.
 
-- telegraf plugins
+- telegraf plugins (https://github.com/albortino/Telegraf-Monitoring/blob/72983d6e3105dda6097453fa64d89909a37558d0/telegraf.conf)
 - grafana queries (influxdb2)
 
 
