@@ -3,11 +3,11 @@
 I am sharing my code for Pi-Hole monitoring with you.
 Feel free to use it in your projects.
 
-## telegraf plugins
+## Telegraf Plugins
 See the code in this .conf file: https://github.com/albortino/Telegraf-Monitoring/blob/72983d6e3105dda6097453fa64d89909a37558d0/telegraf.conf
 
-# Grafana Queries (influxdb2)
-## Monitor the activity similar to PiHole dashboard
+## Grafana Queries (influxdb2)
+### Monitor the activity similar to PiHole dashboard
 Can be visualized with a time series chart.
 
 ```
@@ -19,7 +19,7 @@ from(bucket: "YOUR_BUCKET")
 ```
 
 
-## Monitor the distribution of query types
+### Monitor the distribution of query types
 Can be visualized with a 100% stacked bar chart.
 
 ```
@@ -33,7 +33,7 @@ from(bucket: "YOUR_BUCKET")
 ```
 
 
-## Monitor mean reply time per query and type
+### Monitor mean reply time per query and type
 ```
 from(bucket: "YOUR_BUCKET")
   |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
